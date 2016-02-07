@@ -10,6 +10,7 @@ RUN apt-get update && \
     git clone https://github.com/IteraSpeed/OpenSpeedMonitor.git
 
 ADD build.sh OpenSpeedMonitor/build.sh
+ADD tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 
 RUN cd OpenSpeedMonitor && \
     chmod +x build.sh && \
